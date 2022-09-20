@@ -26,7 +26,7 @@ bot = commands.Bot(
 )
 
 
-@bot.command()
+@bot.command()(name="art")
 async def dream(ctx, *, prompt):
     msg = await ctx.send(f"“{prompt}”\n> Generating...")
     answers = stability_api.generate(prompt=prompt)
